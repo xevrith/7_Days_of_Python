@@ -16,7 +16,7 @@ print(f"Monthly Deposite : {monthly_deposit}")
 print(f"Annual Interest Rate : 7%")
 print(f"{10*"-"} Yearly Summary {10*"-"}")
 print()
-while balance <= target:
+while balance < target:
     balance += monthly_deposit
     total_deposited +=  monthly_deposit
     monthly_intre = balance * annual_interest
@@ -29,7 +29,7 @@ while balance <= target:
         yearly_data.append(yearly_amount)
         update_deposite = monthly_deposit * 0.10
         monthly_deposit += update_deposite
-        year_count += 1
+
 
 for year in yearly_data:
     year_count += 1
