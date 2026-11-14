@@ -12,7 +12,8 @@ warehouses = [
 cities = []
 lat_1 = []
 new_warehouses = []
-data = ()
+highest = ()
+lowest = ()
 
 for city, lat, long in warehouses:
     cities.append(city)
@@ -22,13 +23,13 @@ for city, lat, long in warehouses:
 for city, lat in zip(cities,lat_1):
     if lat == max(lat_1):
         print(f"Northanmost : {city} , {lat}")
-        data += (city,lat)
-        new_warehouses.append(data)
+        highest += (city,lat)
+        new_warehouses.append(highest)
 
 
     if lat == min(lat_1):
         print(f"Southanmost : {city} , {lat}")
-        data += (city,lat)
-        new_warehouses.append(data)
+        lowest += (city,lat)
+        new_warehouses.append(lowest)
 
 print(new_warehouses)
