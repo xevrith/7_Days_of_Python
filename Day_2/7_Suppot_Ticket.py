@@ -14,14 +14,12 @@ returns_count = 0
 
 for word in tickets:
     if "refund" in word.lower() or "payment" in word.lower():
-        if "refund" in word.lower() and "payment" in word.lower():
-            billing_count += 1
-        else:
-            billing_count += 1
+        billing_count += 1
+
     elif "delivery" in word.lower() or "shipped" in word.lower():
         logistics_count += 1
 
-    elif ("crashes" or "crash") in word.lower():
+    elif "crashes"in word.lower() or "crash" in word.lower():
         technical_count += 1
 
     elif "exchange" in word.lower() or "wrong" in word.lower():
